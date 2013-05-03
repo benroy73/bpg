@@ -1,0 +1,284 @@
+/*
+ * Copyright 2013 Benjamin Roy
+ * This program is distributed under the terms of the GNU General Public License version 2.0
+ *
+ * Program name: Ben's Picture Gallery (BPG)
+ * Web site: https://github.com/benroy73/bpg
+ * Author: Benjamin Roy, email: benroy@7373.us
+ * License: GPLv2
+ * Version Release Date: May 2013
+ * Version: 3.0
+ */
+
+@media all {
+
+    /* Custom page CSS
+    -------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+    #wrap > .container {
+        padding-top: 60px;
+    }
+    .container .credit {
+        margin: 20px 0;
+    }
+
+    /* bootstrap template styles */
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html,
+    body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+    }
+    /* Wrapper for page content to push down footer */
+    #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+    }
+    /* Set the fixed height of the footer here */
+    #push,
+    #footer {
+        height: 60px;
+    }
+    #footer {
+        background-color: #f5f5f5;
+    }
+
+
+    /*  override photoswipe styles on body  */
+    body.ps-active, body.ps-building, div.ps-active, div.ps-building {
+        background-color: white;
+    }
+
+    #media {
+        text-align: left;
+    }
+    #media li {
+        position: relative;
+        list-style-type: none;
+        display: inline-block;
+        zoom:1; /* hack for IE7 http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/ */
+        *display:inline;
+        vertical-align: top;
+        margin: 5px 5px 12px 5px;  /*top right bottom left*/
+        padding: 0px;
+    }
+    a.slide {
+        display:  table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 162px;
+        height: 162px;
+        margin: 0px;
+        padding: 4px;
+    }
+    img.thumb_img {
+        border: solid 1px black;
+        margin: 0px;
+        padding: 0px;
+    }
+    span.deleted_file {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    img.cart_icon {
+        display: none;
+        border: none;
+        position: absolute;
+        top: 0px;
+        right: 2px;
+        z-index: 1;
+    }
+
+    #media .cartcontrol{
+        position: absolute;
+        top: -4px;
+        left: 0px;
+        display: none;
+        font-size: small;
+        z-index: 1;
+    }
+
+    #media a.admin_delete_file,
+    #media a.admin_image_rotate_cw,
+    #media a.admin_image_rotate_ccw {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    #media a.admin_image_rotate_ccw {
+        top: -5px;
+        left: -5px;
+        font-size: 1px;
+        padding: 0;
+    }
+    #media a.admin_image_rotate_cw {
+        top: -5px;
+        right: -5px;
+        font-size: 1px;
+        padding: 0;
+    }
+    #media a.admin_delete_file{
+        top: -15px;
+        left: 50px;
+        font-size: small;
+    }
+
+    #media li.admin_mode_active a.admin_image_rotate_cw,
+    #media li.admin_mode_active a.admin_image_rotate_ccw,
+    #media li.admin_mode_active a.admin_delete_file {
+        display: inline;
+        line-height: normal
+    }
+
+
+    .thumb_comments {
+        display:block;
+        text-align: center;
+        font-size: .9em;
+        line-height: 1.1;
+        width: 165px;
+        height: 50px;
+    }
+    .thumb_comments button {
+        position: relative;
+        top: 0px;
+    }
+    .thumb_comments button {
+        position: relative;
+        top: 0px;
+    }
+    .thumb_comments button[type=submit] {
+        margin-right: 1em;
+    }
+    .thumb_comments button[type=cancel] {
+        margin-left: 1em;
+    }
+
+
+    .diagnostics {
+        font-size: large;
+        text-align: left;
+    }
+    .diagnostics div.error {
+        background-color: #FFE4E1;
+        padding: 2px;
+        margin: 8px;
+        border-bottom: 1px solid black;
+    }
+
+
+    #videoPlayerModal {
+        z-index: 9999; /* make sure the videos play on top of PhotoSwipe */
+    }
+
+    #videoPlayerModal .modal-body {
+        max-height: 800px;
+    }
+
+    #ui_cart_menu,
+    #ui_admin_button {
+        display: none;
+    }
+}
+
+
+@media print {
+
+  html {
+      background-color: White;
+      margin: 0;
+      padding: 0;
+      border: 0;
+  }
+  body {
+      background-color: White;
+      color: black;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 12pt;
+  }
+  #header_controls {
+      display:none;
+  }
+  #header .rsslink {
+      display:none;
+  }
+  #footer {
+      display:none;
+  }
+  .nonprinting {
+      display: none;
+  }
+
+}
+
+/*
+iphone4 960-by-640-pixel resolution at 326 ppi
+iphone3 480-by-320-pixel resolution at 163 ppi
+htc sensation 960 x 540 pixel 4.3 inches (~256 ppi pixel density)
+*/
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 512px) {
+    body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    #media a.slide,
+    #media li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    #media li {
+        width: 153px;
+        position: relative;
+    }
+    a.slide {
+        width: 158px;
+        border-left: 1px solid white;
+        position: relative;
+        padding-left: 2px;
+    }
+    .thumb_img {
+        border: none;
+        position: relative;
+        left: -2px;
+    }
+    #media .thumb_comments {
+        height: 38px;
+        width: 158px;
+        line-height: .8;
+        font-size: 0.8em;
+    }
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 979px) {
+    #wrap > .container {
+        padding-top: 0px;
+    }
+}

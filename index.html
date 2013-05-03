@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Picture Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link type='text/css' rel='stylesheet' href="bootstrap/css/bootstrap.css"/>
+    <link type='text/css' rel='stylesheet' href="bootstrap/css/bootstrap-responsive.css"/>
+
+    <link type='text/css' rel='stylesheet' href='photoswipe-3.0.5.1/photoswipe.css'/>
+    <link type='text/css' rel='stylesheet' href='mediaelement-2.10.3-benroy73/mediaelementplayer.css'/>
+    <link type='text/css' rel='stylesheet' href='bpg.css'/>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements https://code.google.com/p/html5shiv/ -->
+    <!--[if lt IE 9]>
+      <script type='text/javascript' src="bootstrap/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"   sizes="72x72" href="/img/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-57-precomposed.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+    <link type='application/rss+xml' rel='alternate' href='/photos/rss.xml' title='announcements of new photos'/>
+    <link type='application/rss+xml' rel='alternate' href='bpg-srv?view=rssnew' title='latest photo folder'/>
+
+  </head>
+  <body>
+
+    <!-- Part 1: Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">My Website</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li id="top_level_breadcrumb"><a href="?">Photos</a></li>
+                <!--<li class="divider-vertical"></li>-->
+              </ul>
+              <ul class="nav pull-right">
+                <li class="pull-right" id="ui_admin_button"><a id="admin_mode_button" href="#">Admin</a></li>
+                <li class="dropdown pull-right" id="ui_cart_menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-shopping-cart"></i> Cart <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a id="add_some_to_cart" href="#">Add some pictures</a></li>
+                    <li><a id="add_all_to_cart" href="#">Add all pictures</a></li>
+                    <li><a id="remove_some_from_cart" href="#">Remove some pictures</a></li>
+                    <li><a id="remove_all_from_cart" href="#">Empty cart</a></li>
+                    <li class="divider"></li>
+                    <li><a id="view_cart_menu_option" href="?dir=cart">View cart</a></li>
+                    <li><a id="buy_prints_menu_option" href="#">Buy Prints</a></li>
+                    <li><a id="download_files_menu_option" href="#">Download Files</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div id="content_media" class="container">
+        <script>document.write('Loading... <img src="images/ajax-loader.gif"/>');</script>
+        <noscript>
+            <p>Sorry, you need to turn on javascript for this site to work properly.</p>
+            <p>Without javascript you can only use the <a href="bpg-srv.php?dir=/">basic version</a>.</p>
+        </noscript>
+      </div>
+
+      <div id="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p id='muted credit'>Powered by <a href='https://github.com/benroy73/bpg'>BPG</a> - <span id='site_stats'></span></p>
+      </div>
+    </div>
+
+    <div id="videoPlayerModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <div id="slideshow_screen"></div>
+        </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type='text/javascript' src="bootstrap/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='mediaelement-2.10.3-benroy73/mediaelement-and-player.min.js'></script>
+    <script type='text/javascript' src='photoswipe-3.0.5.1/lib/klass.min.js'></script>
+    <script type='text/javascript' src='photoswipe-3.0.5.1/code.photoswipe.jquery-3.0.5.1.min.js'></script>
+    <script type='text/javascript' src='jquery.jeditable.js'></script>
+    <script type='text/javascript' src='bpg.js'></script>
+
+    <script type='text/javascript'>
+      
+      
+    </script>
+
+  </body>
+</html>
