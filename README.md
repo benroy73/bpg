@@ -4,7 +4,7 @@ BPG - Ben's Picture Gallery
 
 Demo
 ------
-View the live [demo here](https://benroy73.github.io/bpg/)
+View the live [demo here](http://benroy73.github.io/bpg/)
 
 Installation
 ----------
