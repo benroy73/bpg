@@ -1639,7 +1639,7 @@ function render_thumbnail_area_html( $files, $path ) { //original version
 
         $html .= "
     <li id=\"last_slide\" style=\"display:none;\">
-        <a href=\"/photos/images/the_end.png\" class='slide'><img class='thumb_img' src=\"/photos/images/the_end.png\"/></a>
+        <a href=\"images/the_end.png\" class='slide'><img class='thumb_img' src=\"images/the_end.png\"/></a>
         <p class='thumb_comments'></p>
     </li>
 ";
