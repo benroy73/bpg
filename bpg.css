@@ -184,6 +184,12 @@
     #ui_admin_button {
         display: none;
     }
+    #buy_prints_button,
+    #download_files_button {
+        display: none;
+        margin-left: .5em;
+        margin-right: .5em;
+    }
 }
 
 

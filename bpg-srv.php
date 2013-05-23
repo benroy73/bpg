@@ -231,12 +231,12 @@ $html_page_top = <<<"EOD"
                     <li><a id="remove_all_from_cart" href="#">Empty cart</a></li>
                     <li class="divider"></li>
                     <li><a id="view_cart_menu_option" href="?dir=cart">View cart</a></li>
-                    <li><a id="buy_prints_menu_option" href="#">Buy Prints</a></li>
-                    <li><a id="download_files_menu_option" href="#">Download Files</a></li>
                   </ul>
                 </li>
               </ul>
             </div><!--/.nav-collapse -->
+            <button id="buy_prints_button" class="btn pull-right">Buy Prints<button>
+            <button id="download_files_button" class="btn pull-right">Download Files<button>
           </div>
         </div>
       </div>

@@ -284,14 +284,14 @@ function updateCartButtons() {
             if (isCartPage()) {
                 $('#cart_item_count').text('You have ' + cart_item_count + ' items in your cart.');
                 if (cart_item_count > 0) {
-                    $('#buy_prints_menu_option, #download_files_menu_option').parent().removeClass('disabled');
+                    $('#buy_prints_button, #download_files_button').show();
                 }
                 else {
-                    $('#buy_prints_menu_option, #download_files_menu_option').parent().addClass('disabled');
+                    $('#buy_prints_button, #download_files_button').hide();
                 }
             }
             else {
-                $('#buy_prints_menu_option, #download_files_menu_option').parent().addClass('disabled');
+                $('#buy_prints_button, #download_files_button').hide();
             }
 
         },
@@ -317,7 +317,6 @@ function initializeCartMenu() {
         $('#add_some_to_cart, #add_all_to_cart').hide();
         $('#remove_some_from_cart, #remove_all_from_cart').show();
         $('#view_cart_menu_option').parent().addClass('disabled');
-        $('#buy_prints_menu_option, #download_files_menu_option').parent().removeClass('disabled');
 
         $('#remove_some_from_cart').click( function(event){
             event.preventDefault();
@@ -331,7 +330,7 @@ function initializeCartMenu() {
             }
         });
 
-        $('#buy_prints_menu_option').click( function (event) {
+        $('#buy_prints_button').click( function (event) {
             event.preventDefault();
             if (!$(this).parent().hasClass('disabled')){
                 $.ajax({
@@ -345,7 +344,7 @@ function initializeCartMenu() {
             }
         });
 
-        $('#download_files_menu_option').click( function (event) {
+        $('#download_files_button').click( function (event) {
             event.preventDefault();
             if (!$(this).parent().hasClass('disabled')){
                 window.location = SRV_URL + '?view=download';
@@ -357,7 +356,6 @@ function initializeCartMenu() {
         $('#add_some_from_cart, #add_all_from_cart').show();
         $('#remove_some_from_cart, #remove_all_from_cart').hide();
         $('#view_cart_menu_option').parent().removeClass('disabled');
-        $('#buy_prints_menu_option, #download_files_menu_option').parent().addClass('disabled');
 
         $('#add_some_to_cart').click( function (event){
             event.preventDefault();
